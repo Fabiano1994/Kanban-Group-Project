@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+}
+
+.mainPage {
+    display: flex;
+    flex-direction: row;
+}
+
+.sideBar {
+    background-image: url(./img/bg.jpg);
+    height: 100vh;
+    width: 100px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    border-top-right-radius: 45%;
+    border-bottom-right-radius: 45%;
+}
+
+.mainLinks a{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    text-decoration: none;
+    color: #fff2f2;
+}
+
+.mainLinks a:hover{
+    cursor: pointer;
+    color: #7d0000;
+}
+
+.profilePic img{
+    margin-right: 16px;
+    border-radius: 50%;
+}
+
+.mainTaskContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px;
+
+}
+
+.task {
+    position: relative;
+    height: 90%;
+    width: 150px;
+    background: #ff5a0042;
+    margin: 0 8px;
+    border-radius: 32px;
+    text-align: center;
+    
+}
