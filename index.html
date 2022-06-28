@@ -16,8 +16,8 @@
 
 </head>
 
-<body>
-
+<body onload="showTasks()">
+    
     <div class="mainPage">
     <div class="sideBar">
         <div class="logo"><img src="./img/logo.png" alt=""></div>
@@ -27,8 +27,13 @@
               </button> -->
             <span class="mainLinks">
                 <a href="index.html">Board</a>
+<<<<<<< HEAD
                 <a href="/templates/backlog.html">Backlog</a>
                 <a href="./addTaskIndex.html">Add Task</a>
+=======
+                <a href="./backlog.html" >Backlog</a>
+                <a href="#">Add Task</a>
+>>>>>>> b5b0292b9f0c7f8b6243a6fc655550974ab37037
                 <a href="#">Help</a>
             </span>
         </div>
@@ -36,10 +41,18 @@
     </div>
 
     <div class="mainTaskContainer">
-        <div id="task1" class="task"><h5>To do</h5></div>
-        <div id="task2" class="task"><h5>In Progress</h5></div>
-        <div id="task3" class="task"><h5>Scheduled</h5></div>
-        <div id="task4" class="task"><h5>Done</h5></div>
+        <div  class="task" ><h5>To do</h5>
+            <div id="task1"></div>
+        </div>
+        <div class="task" ><h5>In Progress</h5>
+            <div id="task2"></div>
+        </div>
+        <div class="task" ><h5>Scheduled</h5>
+            <div id="task3"></div>
+        </div>
+        <div class="task" ><h5>Done</h5>
+            <div id="task4"></div>
+        </div>
     </div>
     </div>
 
