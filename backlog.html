@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban</title>
+
+    <script src="/./main.js"></script>
+    <script src="/./mini_backend.js"></script>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+</head>
+<body>
+    
+   
+    <div class="mainPage">
+        <div class="sideBar">
+            <div class="logo"><img src="./img/logo.png" alt=""></div>
+            <div class="navBar">
+                <!-- <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
+                    <i class="material-icons">add</i>
+                  </button> -->
+                <span class="mainLinks">
+                    <a href="index.html">Board</a>
+                    <a href="/templates/backlog.html">Backlog</a>
+                    <a href="#">Add Task</a>
+                    <a href="#">Help</a>
+                </span>
+            </div>
+            <div class="profilePic"><img id="profilePic" src="./img/profilePic3.jpg"></div>
+        </div>
+
+        <div id="backlogDiv"><div class="headline">
+            <h3>Backlog</h3>
+            <span class="backlogInfo">Learning Management System Project.</span>
+        </div>
+        <div class="tableDiv">
+            <table>
+                <thead>
+                    <tr id="tableHeader">
+                        <th class="assignedTo">ASSIGNED TO</th>
+                        <th class="category">CATEGORY</th>
+                        <th class="details">DETAILS</th>
+                    </tr>
+                </thead>
+                <tbody class="backlogContent"><tr>
+                        <td class="taskCreator">
+                            <img src="./img/profilePic2.jpg">
+                            &nbsp&nbsp&nbsp
+                            <div class="name">
+                                <span>Max Mustermann</span>
+                            </div>
+                        </td>
+                        <td class="">(Category Class)</td>
+                        <td class="">(description of details)</td>
+                        <td class="" onclick="">add to board</td>
+                    </tr></tbody>
+            </table>
+        </div></div>
+   
+
+</body>
+</html>
