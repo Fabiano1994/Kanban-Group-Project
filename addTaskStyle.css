@@ -1,0 +1,232 @@
+body {
+    margin: 0;
+}
+
+label {
+    margin-bottom: 9px;
+    margin-top: -2px;
+}
+
+.mainPage {
+    display: flex;
+    flex-direction: row;
+}
+
+.sideBar {
+    background-image: url(./img/bg.jpg);
+    height: 100vh;
+    width: 100px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    border-top-right-radius: 45%;
+    border-bottom-right-radius: 45%;
+}
+
+.mainLinks a{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    text-decoration: none;
+    color: #fff2f2;
+}
+
+.mainLinks a:hover{
+    cursor: pointer;
+    color: #7d0000;
+}
+
+.profilePic img{
+    margin-right: 16px;
+    border-radius: 50%;
+}
+/* -----------------------------ADD TASK SECTION------------------------------------------- */
+/* ---------------------------------------------------------------------------------- */
+.mainTaskContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px;
+
+}
+
+.task {
+    position: relative;
+    height: 90%;
+    width: 150px;
+    background: #ff5a0042;
+    margin: 0 8px;
+    border-radius: 32px;
+    text-align: center;
+    
+}
+
+#addTaskSection {
+    padding: 3rem;
+    min-height: 33%;
+}
+
+#addTaskInputs {
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #fff3e6;
+    font-size: medium;
+    font-weight: bold;
+    color: rgba(255, 149, 0, 0.801);
+    border-radius: 13px;
+    width: 100%;
+    padding-right: 0.6rem;
+}
+
+.leftInputs .rightInputs {
+    display: flex;
+    flex-direction: column;
+    width: 45vmin;
+    padding: 1rem;
+}
+.inputField {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.2rem;
+    margin-bottom: 1.5rem;
+    margin-left: 2rem;
+    margin-right: 1rem;
+}
+
+#titleInputField {
+        font-size: medium;
+        border-radius: 4px;
+        padding: 0.5rem;
+        margin-top: 0.3rem;
+        outline: none;
+        height: 3.5rem;
+        width: 336px;
+        border-width: 1.6px;
+        border: 1px solid #c0c0c073;
+}
+
+.input-form input, textarea, select {
+    outline: none;
+    border-width: 1.5px;
+    border: 1px solid #c0c0c073;    
+    font-size: large;
+    padding: 0.5rem;
+    margin-top: 0.3rem;
+    border-width: 1.6px;
+    border-radius: 5px;
+}
+
+.input-form label[required]::after {
+    content: ' *';
+    color: red;
+}
+
+.headlineTask {
+    font-size: 32px;
+    font-weight: bold;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+.underHeadlineTask {
+    font-size: 12px;
+    color: orange;
+    padding-top: 0px;
+    margin-top: -18px;
+}
+.taskButtons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0.85rem;
+}
+#cancelButton {
+    padding-right: 80px;
+    padding-left: 120px;
+    font-size: 16px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: transparent;
+    color: rgb(255, 136, 0);
+    cursor: pointer;
+    font-weight: bold;
+    cursor: pointer;
+}
+#createTaskButton {
+    padding: 0.5rem 2rem;
+    font-size: 16px;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    background-image: url(./img/bg.jpg);
+    color: white;
+    cursor: pointer;
+    height: 3.8rem;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#plusButton {
+    position: relative;
+    color: orange;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: none;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+#assignedProfilePicture {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+#assignedProfile {
+    padding-top: 4rem;
+}
+#dueDate {
+    outline: none;
+    border-radius: 4px;
+    font-size: large;
+    padding: 0.5rem;
+    margin-top: 0.3rem;
+    height: 3.5rem;
+    cursor: pointer;
+    border-width: 1.6px;
+    border: 1px solid #c0c0c073;
+}
+.categorySelect {
+    outline: none;
+    border-radius: 4px;
+    font-size: large;
+    padding: 0.5rem;
+    margin-top: 0.3rem;
+    height: 4.7rem;
+    cursor: pointer;
+    border-width: 1.6px;
+    border: 1px solid #c0c0c073;
+}
+
+#urgency {
+    outline: none;
+    border-radius: 4px;
+    font-size: large;
+    padding: 0.5rem;
+    margin-top: 0.3rem;
+    height: 4.7rem;
+    cursor: pointer;
+    border-width: 1.6px;
+    border: 1px solid #c0c0c073;
+}
+input[type=date]::-webkit-calendar-picker-indicator {
+    background-image: url(./img/icons8-calendar-150.png);
+    background-size: 1.2rem;
+    cursor: pointer;
+}
+
+
+/* ---------------------------------------------------------------------------------- */
