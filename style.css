@@ -4,6 +4,15 @@ body {
 
 /* ____________INDEX____________ */
 
+.header {
+    content-visibility: hidden;
+}
+
+.dropstyle {
+    visibility: hidden;
+}
+
+
 .mainPage {
     display: flex;
     flex-direction: row;
@@ -19,6 +28,7 @@ body {
     align-items: center;
     border-top-right-radius: 45%;
     border-bottom-right-radius: 45%;
+    box-shadow: 0 0 20px 8px darkgrey;
 }
 
 .mainLinks a{
@@ -44,6 +54,9 @@ body {
     justify-content: space-between;
     align-items: center;
     margin: 30px;
+    margin-bottom: 0px!important;
+    margin-top: 0px!important;
+    height: 100vh;
 
 }
 
