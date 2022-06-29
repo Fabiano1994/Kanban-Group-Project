@@ -1,30 +1,37 @@
 
 
 let tasks = [];
-let logs = [];
+
 
 async function init() {
     await downloadFromServer();
     tasks = JSON.parse(backend.getItem('tasks')) || [];
-    logs = JSON.parse(backend.getItem('logs')) || [];
 }
 
 async function addTask() {
-    let title = document.getElementById('t1');
-    let descr = document.getElementById('t2');
-    let date = document.getElementById('t3');
+    await init();
+    let title = document.getElementById('titleInputField');
+    let cat = document.getElementById('selection');
+    let descr = document.getElementById('txtDescription');
+    let date = document.getElementById('dueDate');
+    let urgency = document.getElementById('urgency');
     let taskNew = {
         "title": title.value,
+        "category": cat.value,
         "description": descr.value,
         "date": date.value,
+        "urgency": urgency.value,
         "id": tasks.length,
         "status": 0,
-        "assigned": assigned
+        //"assigned": assigned
     };
     tasks.push(taskNew);
-    newLog(tasks.length - 1);
     saveTasks();
-    //showTasks();
+    document.getElementById('titleInputField').value='';
+    document.getElementById('selection').value='';
+    document.getElementById('txtDescription').value='';
+    document.getElementById('dueDate').value='';
+    document.getElementById('urgency').value='';
 }
 
 async function showTasks() {
@@ -44,19 +51,6 @@ async function showTasks() {
     }
 }
 
-function newLog(i) {
-    const d = new Date();
-    d.getTime();
-    let newLog = {
-        'date': d,
-        'task': tasks[i].title,
-        'description': tasks[i].descr
-
-    }
-    logs.push(newLog);
-    saveLogs();
-}
-
 async function showLogs() {
     await init();
     document.getElementById('logs').innerHTML =``;
@@ -71,7 +65,7 @@ async function showLogs() {
                         <span>Max Mustermann</span>
                     </div>
                 </td>
-                <td class="">(Category Class)</td>
+                <td class="">${tasks[i].category}</td>
                 <td class="">${tasks[i].title}</td>
                 <td class="" onclick="changeCat(${i})">add to board</td>
             </tr>
@@ -80,17 +74,7 @@ async function showLogs() {
     }
 }
 
-/*
-function showLogs() {
-    for (i = logs.length - 1; i <= 0; i--) {
-        document.getElementById('').innerHTML += `
-            <div>
 
-            </div>
-        `
-    }
-}
-*/
 async function changeCat(i) {
     if (tasks[i].status < 4) {
         tasks[i].status++;
@@ -114,14 +98,4 @@ function delTask(i) {
 
 async function saveTasks() {
     await backend.setItem('tasks', JSON.stringify(tasks));
-}
-
-async function saveLogs() {
-    await backend.setItem('logs', JSON.stringify(logs));
-}
-
-function delLog(i) {
-    logs.splice(i, 1);
-    saveLogs();
-    showLogs();
 }
