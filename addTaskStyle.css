@@ -1,45 +1,7 @@
-body {
-    margin: 0;
-}
-
-label {
-    margin-bottom: 9px;
-    margin-top: -2px;
-}
-
-.mainPage {
-    display: flex;
-    flex-direction: row;
-}
-
-.sideBar {
-    background-image: url(./img/bg.jpg);
+.bg-add-task {
+    background-image: url(./img/bg2.jpg);
+    background-size: cover;
     height: 100vh;
-    width: 100px;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: center;
-    border-top-right-radius: 45%;
-    border-bottom-right-radius: 45%;
-}
-
-.mainLinks a {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    text-decoration: none;
-    color: #fff2f2;
-}
-
-.mainLinks a:hover {
-    cursor: pointer;
-    color: #7d0000;
-}
-
-.profilePic img {
-    margin-right: 16px;
-    border-radius: 50%;
 }
 
 /* -----------------------------ADD TASK SECTION------------------------------------------- */
@@ -52,7 +14,7 @@ label {
 
 }
 
-.task {
+.task1 {
     position: relative;
     height: 90%;
     width: 150px;
@@ -263,6 +225,9 @@ input[type=date]::-webkit-calendar-picker-indicator {
 /* <------------------------------------- RESPONSIVE & HEADER RESPONSIVE ------------------------------------------> */
 
 @media only screen and (max-width: 1000px) {
+    .bg-add-task {
+        height: 132vh;
+    }
     .sideBar {
         display: none;
     }
@@ -285,8 +250,8 @@ input[type=date]::-webkit-calendar-picker-indicator {
         overflow: hidden;
         background-image: url(./img/bg.jpg);
         padding: 12px 1px 0px 23px;
-        border-bottom-right-radius: 22%;
-        border-bottom-left-radius: 22%;
+        border-bottom-right-radius: 16%;
+        border-bottom-left-radius: 16%;
         box-shadow: -3px 1px 20px 9px #535151;
         height: -4%;
         height: 149px;
@@ -337,6 +302,9 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 @media screen and (max-width: 580px) {
+    .bg-add-task {
+        height: 130vh;
+    }
     .header {
         padding: 0px 0px;
     }
@@ -377,9 +345,15 @@ input[type=date]::-webkit-calendar-picker-indicator {
     .header {
         zoom: 0.8;
     }
+    .bg-add-task {
+        height: 110vh;
+    }
 }
 
 @media only screen and (max-width: 400px) {
+    .bg-add-task {
+        height: 100vh;
+    }
     .mainPage {
         transition: transform .2s;
         zoom: 0.6;
@@ -420,7 +394,7 @@ nav {
     background: lightcoral;
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
-    margin-top: -21px;
+    margin-top: -9px;
     border: solid;
     border-top: none;
     border-bottom: 0px;

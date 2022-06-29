@@ -21,6 +21,7 @@ body {
 .mainPage {
     display: flex;
     flex-direction: row;
+    height: 100vh;
 }
 
 .sideBar {

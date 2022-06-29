@@ -3,7 +3,7 @@ let selected = [];
 let tasks = [];
 let users = [
     {
-        "name": "Ahmed",
+        "name": "Ahmet",
         "profPic": "./img/profilePic1.jpg"
     },
     {
