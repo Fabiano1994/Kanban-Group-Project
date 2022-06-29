@@ -17,38 +17,59 @@
 </head>
 
 <body onload="showTasks()">
-    
-    <div class="mainPage">
-    <div class="sideBar">
-        <div class="logo"><img src="./img/logo.png" alt=""></div>
-        <div class="navBar">
-            <!-- <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
+
+    <div class="bgMainPage">
+        <div class="mainPage">
+            <div class="sideBar">
+                <div class="logo"><img src="./img/logo.png" alt=""></div>
+                <div class="navBar">
+                    <!-- <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
                 <i class="material-icons">add</i>
               </button> -->
-            <span class="mainLinks">
-                <a href="index.html">Board</a>
-                <a href="backlog.html">Backlog</a>
-                <a href="addTaskIndex.html">Add Task</a>
-                <a href="#">Help</a>
-            </span>
-        </div>
-        <div class="profilePic"><img id="profilePic" src="./img/profilePic3.jpg"></div>
-    </div>
+                    <span class="mainLinks">
+                        <a href="index.html">Board</a>
+                        <a href="backlog.html">Backlog</a>
+                        <a href="addTaskIndex.html">Add Task</a>
+                        <a href="#">Help</a>
+                    </span>
+                </div>
+                <div class="profilePic"><img id="profilePic" src="./img/profilePic3.jpg"></div>
+            </div>
 
-    <div class="mainTaskContainer">
-        <div  class="task" ><h5>To do</h5>
-            <div id="task1"></div>
+            <div class="mainTaskContainer">
+                <div class="task">
+                    <h5>To do</h5>
+                    <div id="task1">
+                        <div id="" class="newTask" draggable="true" ondragstart="drag()" ondblclick="showInputForm()"
+                            title="double-click for edit!">
+                            <img class="profilePicTask" id="profilePic" src="./img/profilePic1.jpg">
+                            <div>
+                                <h5>Header</h5>
+                                <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            </div>
+                            <div class="taskDate">
+                                <p>04.06.2022</p>
+                                <img class="taskIcons" src="./img/trash.ico" onclick="killTask()" title="remove task">
+                                <img class="taskIcons" src="./img/edit.ico" onclick="editTask()" title="edit task">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="task">
+                    <h5>In Progress</h5>
+                    <div id="task2"></div>
+                </div>
+                <div class="task">
+                    <h5>Testing</h5>
+                    <div id="task3"></div>
+                </div>
+                <div class="task">
+                    <h5>Done</h5>
+                    <div id="task4"></div>
+                </div>
+            </div>
         </div>
-        <div class="task" ><h5>In Progress</h5>
-            <div id="task2"></div>
-        </div>
-        <div class="task" ><h5>Testing</h5>
-            <div id="task3"></div>
-        </div>
-        <div class="task" ><h5>Done</h5>
-            <div id="task4"></div>
-        </div>
-    </div>
+
     </div>
 
 </body>
