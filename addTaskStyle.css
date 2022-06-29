@@ -240,6 +240,21 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .header {
     content-visibility: hidden;
 }
+.avatar {
+    border: 4px solid transparent;
+    opacity: 0.6;
+}
+
+.avatar:hover {
+    opacity: 1;
+
+}
+
+.selAv {
+    opacity: 1 !important;
+    border: 4px solid rgb(223, 130, 44) !important;
+}
+
 
 .dropstyle {
     visibility: hidden;
