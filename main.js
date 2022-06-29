@@ -1,6 +1,20 @@
 
-
+let selected = [];
 let tasks = [];
+let users = [
+    {
+        "name": "Ahmed",
+        "profPic": "./img/profilePic1.jpg"
+    },
+    {
+        "name": "Fabian",
+        "profPic": "./img/profilePic2.jpg"
+    },
+    {
+        "name": "André",
+        "profPic": "./img/profilePic3.jpg"
+    }
+]
 
 
 async function init() {
@@ -10,6 +24,9 @@ async function init() {
 
 async function addTask() {
     await init();
+    if (selected.length == 0) {
+        selected[0] = 0;
+    }
     let title = document.getElementById('titleInputField');
     let cat = document.getElementById('selection');
     let descr = document.getElementById('txtDescription');
@@ -23,7 +40,7 @@ async function addTask() {
         "urgency": urgency.value,
         "id": tasks.length,
         "status": 0,
-        //"assigned": assigned
+        "assigned": users[selected[0]]
     };
     tasks.push(taskNew);
     saveTasks();
@@ -57,12 +74,12 @@ async function showLogs() {
     for (i = 0; i < tasks.length; i++) {
         if (tasks[i].status == 0) {
             document.getElementById('logs').innerHTML += `
-            <tr>
-                <td class="taskCreator">
-                    <img src="./img/profilePic2.jpg">
+            <tr class="${tasks[i].urgency}">
+                <td class="taskCreator ">
+                    <img src="${tasks[i].assigned.profPic}">
                     &nbsp&nbsp&nbsp
                     <div class="name">
-                        <span>Max Mustermann</span>
+                        <span>${tasks[i].assigned.name}</span>
                     </div>
                 </td>
                 <td class="">${tasks[i].category}</td>
@@ -98,4 +115,13 @@ function delTask(i) {
 
 async function saveTasks() {
     await backend.setItem('tasks', JSON.stringify(tasks));
+}
+
+function selectAv(i) {
+    if (selected.includes(i)) {
+        selected = selected.filter (a => a != i);
+    } else {
+        selected.push(i);
+    }
+    document.getElementById('assignedProfilePicture'+i).classList.toggle('selAv');
 }
