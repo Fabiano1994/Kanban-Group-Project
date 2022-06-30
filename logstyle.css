@@ -1,20 +1,20 @@
 
 .important {
-    background-color: rgb(192, 31, 31);
+    background-color: rgb(255 0 0 / 80%);
     color: white;
 }
 
 .high {
-    background-color: rgb(221, 103, 34);
+    background-color: rgb(255 112 0 / 80%);
     color: white;
 }
 
 .medium {
-    background-color: rgb(234, 238, 24);
+    background-color: rgb(255 193 7 / 80%);
     color: black;
 }
 
 .low {
-    background-color: rgb(70, 146, 47);
+    background-color: rgb(105 239 0 / 80%);
     color: black;
 }
