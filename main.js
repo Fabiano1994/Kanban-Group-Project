@@ -60,9 +60,20 @@ async function showTasks() {
     for (i = 0; i < tasks.length; i++) {
         if (tasks[i].status > 0) {
             document.getElementById('task' + (tasks[i].status)).innerHTML += `
-            <div onclick="changeCat(${i})">
-                ${tasks[i].title}
+            <div id="task${i}">
+                <div id="" class="newTask" draggable="true" ondragstart="drag()" ondblclick="showInputForm()"
+                    title="double-click for edit!">
+                    <img class="profilePicTask" id="profilePic" src="${tasks[i].assigned.profPic}">
+                <div>
+                <h5>${tasks[i].title}</h5>
+                <p class="description">${tasks[i].description}</p>
             </div>
+            <div class="taskDate">
+                <p>${tasks[i].date}</p>
+                <img class="taskIcons" src="./img/trash.ico" onclick="delTask(${i})" title="remove task">
+                <img class="taskIcons" src="./img/edit.ico" onclick="editTask()" title="edit task">
+            </div>
+            
         `
         };
     }
@@ -107,10 +118,10 @@ async function changeCat(i) {
     }
 }
 
-function delTask(i) {
+async function delTask(i) {
     tasks.splice(i, 1);
-    saveTasks();
-
+    await saveTasks();
+    showTasks();
 }
 
 async function saveTasks() {
