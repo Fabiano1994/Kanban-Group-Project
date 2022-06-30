@@ -1,18 +1,22 @@
 
 let selected = [];
 let tasks = [];
+let actualEdit;
 let users = [
     {
         "name": "Ahmet",
-        "profPic": "./img/profilePic1.jpg"
+        "profPic": "./img/profilePic1.jpg",
+        "number": 0
     },
     {
         "name": "Fabian",
-        "profPic": "./img/profilePic2.jpg"
+        "profPic": "./img/profilePic2.jpg",
+        "number": 1
     },
     {
         "name": "André",
-        "profPic": "./img/profilePic3.jpg"
+        "profPic": "./img/profilePic3.jpg",
+        "number": 2
     }
 ]
 
@@ -71,7 +75,7 @@ async function showTasks() {
             <div class="taskDate">
                 <p>${tasks[i].date}</p>
                 <img class="taskIcons" src="./img/trash.ico" onclick="delTask(${i})" title="remove task">
-                <img class="taskIcons" src="./img/edit.ico" onclick="editTask()" title="edit task">
+                <img class="taskIcons" src="./img/edit.ico" onclick="editTask(${i})" title="edit task">
             </div>
             
         `
@@ -135,4 +139,36 @@ function selectAv(i) {
         selected.push(i);
     }
     document.getElementById('assignedProfilePicture'+i).classList.toggle('selAv');
+}
+
+function editTask(i) {
+    document.getElementById('addTaskSection').classList.remove('dnone');
+    document.getElementById('titleInputField').value = tasks[i].title;
+    document.getElementById('selection').value = tasks[i].category;
+    document.getElementById('txtDescription').value = tasks[i].description;
+    document.getElementById('dueDate').value = tasks[i].date;
+    document.getElementById('urgency').value = tasks[i].urgency;
+    selectAv(tasks[i].assigned.number);
+    actualEdit=i;
+
+}
+
+async function saveEdit() {
+    tasks[actualEdit].title = document.getElementById('titleInputField').value;
+    tasks[actualEdit].cat = document.getElementById('selection').value;
+    tasks[actualEdit].description = document.getElementById('txtDescription').value;
+    tasks[actualEdit].date = document.getElementById('dueDate').value;
+    tasks[actualEdit].urgency = document.getElementById('urgency').value;
+    if (selected[0]){
+        tasks[actualEdit].assigned = users[selected[0]];
+    } else {
+        tasks[actualEdit].assigned = users[0];
+    }
+    document.getElementById('addTaskSection').classList.add('dnone');
+    await saveTasks();
+    showTasks();
+}
+
+function closeWindow() {
+    document.getElementById('addTaskSection').classList.add('dnone');
 }

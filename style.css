@@ -82,6 +82,17 @@ body {
     font-weight: bold;
 }
 
+.dnone {
+    display: none;
+    
+}
+
+.popup {
+    z-index: 2;
+    position: absolute;
+    top: 20%;
+}
+
 /* ____________BOARD____________ */
 
 .newTask {
