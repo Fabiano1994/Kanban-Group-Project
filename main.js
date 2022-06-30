@@ -142,6 +142,9 @@ function selectAv(i) {
 }
 
 function editTask(i) {
+    document.getElementById('assignedProfilePicture0').classList.remove('selAv');
+    document.getElementById('assignedProfilePicture1').classList.remove('selAv');
+    document.getElementById('assignedProfilePicture2').classList.remove('selAv');
     document.getElementById('addTaskSection').classList.remove('dnone');
     document.getElementById('titleInputField').value = tasks[i].title;
     document.getElementById('selection').value = tasks[i].category;
