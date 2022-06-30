@@ -1,5 +1,6 @@
 body {
-    margin: 0;
+    background-image: url(./img/bg2.jpg);
+    background-size: cover;
 }
 
 /* ____________INDEX____________ */
@@ -10,12 +11,6 @@ body {
 
 .dropstyle {
     visibility: hidden;
-}
-
-
-.bgMainPage {
-    background-image: url(./img/bg2.jpg);
-    background-size: cover;
 }
 
 .mainPage {
