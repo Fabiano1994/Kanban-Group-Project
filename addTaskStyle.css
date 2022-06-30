@@ -254,7 +254,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
         border-bottom-left-radius: 16%;
         box-shadow: -3px 1px 20px 9px #535151;
         height: -4%;
-        height: 149px;
+        height: 80px;
     }
 }
 

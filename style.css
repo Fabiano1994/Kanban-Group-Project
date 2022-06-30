@@ -1,6 +1,5 @@
 body {
-    background-image: url(./img/bg2.jpg);
-    background-size: cover;
+    margin: 0;
 }
 
 /* ____________INDEX____________ */
@@ -11,6 +10,12 @@ body {
 
 .dropstyle {
     visibility: hidden;
+}
+
+
+.bgMainPage {
+    background-image: url(./img/bg2.jpg);
+    background-size: cover;
 }
 
 .mainPage {
@@ -57,19 +62,21 @@ body {
     margin: 30px;
     margin-bottom: 0px!important;
     margin-top: 0px!important;
-    height: 100vh;
+    /* height: fit-content; */
 
 }
 
 .task {
     position: relative;
     height: 90%;
+    min-height: 600px;
     width: 200px;
     background: #ff5a0042;
     margin: 0 8px;
     border-radius: 32px;
     text-align: center;
     color: #7d0000;
+    /* height: fit-content; */
     
 }
 
@@ -164,3 +171,19 @@ td {
     padding: 2px;
 }
 
+/* ____________RESPONSIVE____________ */
+
+@media only screen and (max-width: 1000px) {
+    .mainTaskContainer {
+        flex-direction: column;
+        padding: 8px;
+        height: fit-content;
+    }
+    .task {
+        min-height: 400px;
+        margin: 8px
+    }
+    .logo1 {
+        height: 50px;
+    }
+}
