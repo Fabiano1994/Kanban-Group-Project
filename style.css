@@ -113,6 +113,18 @@ body {
     border-radius: 50%;
 }
 
+.boardImg:hover {
+    cursor: pointer;
+}
+
+.descriptionHeader {
+    word-wrap: break-word;
+}
+
+.description {
+    word-wrap: break-word;
+}
+
 /* ____________BACKLOG____________ */
 
 .headline span{

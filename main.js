@@ -70,7 +70,7 @@ async function showTasks() {
                     title="double-click for edit!">
                     <img class="profilePicTask" id="profilePic" src="${tasks[i].assigned.profPic}">
                 <div>
-                <h5>${tasks[i].title}</h5>
+                <h5 class="descriptionHeader">${tasks[i].title}</h5>
                 <p class="description">${tasks[i].description}</p>
             </div>
             <div class="taskDate">
@@ -116,7 +116,10 @@ async function showLogs() {
                 </td>
                 <td class="">${tasks[i].category}</td>
                 <td class="">${tasks[i].title}</td>
-                <td class="" onclick="changeCat(${i})">add to board</td>
+                <td class="">${tasks[i].urgency}</td>
+                <td class="" onclick="showTasks(${i})"><img class="boardImg" src="./img/zoom.ico" title="view details"></td>
+                <td class="" onclick="changeCat(${i})"><img class="boardImg" src="./img/plus.ico" title="add to board"></td>
+                <td class="" onclick="delTask(${i})"><img class="boardImg" src="./img/trash.ico" title="delete"></td>
             </tr>
             `
         }
