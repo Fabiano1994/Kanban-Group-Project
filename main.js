@@ -54,6 +54,7 @@ async function addTask() {
     document.getElementById('txtDescription').value='';
     document.getElementById('dueDate').value='';
     document.getElementById('urgency').value='';
+    resetAV();
 }
 
 async function showTasks() {
@@ -121,7 +122,7 @@ async function showLogs() {
                 <td class="">${tasks[i].urgency}</td>
                 <td class="" onclick="showTasks(${i})"><img class="boardImg" src="./img/zoom.ico" title="view details"></td>
                 <td class="" onclick="changeCat(${i})"><img class="boardImg" src="./img/plus.ico" title="add to board"></td>
-                <td class="" onclick="delTask(${i})"><img class="boardImg" src="./img/trash.ico" title="delete"></td>
+                <td class="" onclick="delLog(${i})"><img class="boardImg" src="./img/trash.ico" title="delete"></td>
             </tr>
             `
         }
@@ -150,6 +151,12 @@ async function delTask(i) {
     showTasks();
 }
 
+async function delLog(i) {
+    tasks.splice(i, 1);
+    await saveTasks();
+    showLogs();
+}
+
 async function saveTasks() {
     await backend.setItem('tasks', JSON.stringify(tasks));
 }
@@ -164,9 +171,7 @@ function selectAv(i) {
 }
 
 function editTask(i) {
-    document.getElementById('assignedProfilePicture0').classList.remove('selAv');
-    document.getElementById('assignedProfilePicture1').classList.remove('selAv');
-    document.getElementById('assignedProfilePicture2').classList.remove('selAv');
+    resetAV();
     document.getElementById('addTaskSection').classList.remove('dnone');
     document.getElementById('titleInputField').value = tasks[i].title;
     document.getElementById('selection').value = tasks[i].category;
@@ -176,6 +181,12 @@ function editTask(i) {
     selectAv(tasks[i].assigned.number);
     actualEdit=i;
 
+}
+
+function resetAV() {
+    document.getElementById('assignedProfilePicture0').classList.remove('selAv');
+    document.getElementById('assignedProfilePicture1').classList.remove('selAv');
+    document.getElementById('assignedProfilePicture2').classList.remove('selAv');
 }
 
 async function saveEdit() {
