@@ -2,6 +2,7 @@
 let selected = [];
 let tasks = [];
 let actualEdit;
+let currentDrop;
 let users = [
     {
         "name": "Ahmet",
@@ -65,7 +66,7 @@ async function showTasks() {
         if (tasks[i].status > 0) {
             document.getElementById('task' + (tasks[i].status)).innerHTML += `
             <div id="task${i}">
-                <div id="" class="newTask" draggable="true" ondragstart="drag()" ondblclick="showInputForm()"
+                <div id="" class="newTask" draggable="true" ondragstart="drag(${i})" ondblclick="showInputForm()"
                     title="double-click for edit!">
                     <img class="profilePicTask" id="profilePic" src="${tasks[i].assigned.profPic}">
                 <div>
@@ -81,6 +82,22 @@ async function showTasks() {
         `
         };
     }
+}
+
+function drag(id) {
+    currentDrop=id;
+    
+}
+
+function allowDrop(ev) {
+    ev.preventDefault();
+  }
+  
+
+async function moveTo (i) {
+    tasks[currentDrop].status = i;
+    await saveTasks();
+    await showTasks();
 }
 
 async function showLogs() {
