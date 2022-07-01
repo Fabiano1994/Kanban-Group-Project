@@ -65,18 +65,20 @@ async function showTasks() {
     for (i = 0; i < tasks.length; i++) {
         if (tasks[i].status > 0) {
             document.getElementById('task' + (tasks[i].status)).innerHTML += `
-            <div id="task${i}">
-                <div id="" class="newTask" draggable="true" ondragstart="drag(${i})" ondblclick="showInputForm()"
-                    title="double-click for edit!">
-                    <img class="profilePicTask" id="profilePic" src="${tasks[i].assigned.profPic}">
-                <div>
-                <h5 class="descriptionHeader">${tasks[i].title}</h5>
-                <p class="description">${tasks[i].description}</p>
-            </div>
-            <div class="taskDate">
-                <p>${tasks[i].date}</p>
-                <img class="taskIcons" src="./img/trash.ico" onclick="delTask(${i})" title="remove task">
-                <img class="taskIcons" src="./img/edit.ico" onclick="editTask(${i})" title="edit task">
+            <div id="tasks${i}" draggable="true" ondragstart="drag(${i})">
+                <div >
+                    <div id="" class="newTask" " ondblclick="showInputForm()"
+                        title="double-click for edit!">
+                        <img class="profilePicTask" id="profilePic" src="${tasks[i].assigned.profPic}">
+                    <div>
+                    <h5 class="descriptionHeader">${tasks[i].title}</h5>
+                    <p class="description">${tasks[i].description}</p>
+                </div>
+                <div class="taskDate">
+                    <p>${tasks[i].date}</p>
+                    <img class="taskIcons" src="./img/trash.ico" onclick="delTask(${i})" title="remove task">
+                    <img class="taskIcons" src="./img/edit.ico" onclick="editTask(${i})" title="edit task">
+                </div>
             </div>
             
         `
