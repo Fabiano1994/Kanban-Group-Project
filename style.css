@@ -1,33 +1,25 @@
 body {
     margin: 0;
+    background-image: url(./img/bg2-bicubic.jpg);
+    background-repeat: no-repeat;
+    min-width: 0px;
 }
 
 /* ____________INDEX____________ */
 
-.header {
-    content-visibility: hidden;
-}
-
-.dropstyle {
-    visibility: hidden;
-}
-
-
-.bgMainPage {
-    background-image: url(./img/bg2.jpg);
-    background-size: cover;
+.navbar {
+    display: none!important;
 }
 
 .mainPage {
     display: flex;
     flex-direction: row;
-    height: 100vh;
 }
 
 .sideBar {
     background-image: url(./img/bg.jpg);
     height: 100vh;
-    width: 100px;
+    width: 115px;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -40,14 +32,28 @@ body {
 .mainLinks a{
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    padding: 8px;
     text-decoration: none;
     color: #fff2f2;
+    display: flex;
+    gap: 1em;
+    font-size: 16px;
+    padding-right: 0px;
+    padding-left: 0px;
 }
 
-.mainLinks a:hover{
-    cursor: pointer;
-    color: #7d0000;
+.mainLinks li:hover {
+ background-color: rgb(240, 128, 128);
+ border-radius: 15px;
+ transition: 0.3s ease;
+ text-decoration: none;
+ font-size: 16px;
+ box-shadow: 7px 13px 20px 0px #535151;
+ padding-top: 5px;  
+ padding-bottom: 5px;
+}
+.mainLinks li {
+ padding: 5px 14px;
 }
 
 .profilePic img{
@@ -63,7 +69,7 @@ body {
     margin-bottom: 0px!important;
     margin-top: 0px!important;
     /* height: fit-content; */
-
+    flex-flow: wrap;
 }
 
 .task {
@@ -185,9 +191,9 @@ td {
 
 /* ____________RESPONSIVE____________ */
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1062px) {
     .mainTaskContainer {
-        flex-direction: column;
+        flex-direction: row;
         padding: 8px;
         height: fit-content;
     }
