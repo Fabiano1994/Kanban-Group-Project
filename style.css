@@ -1,8 +1,11 @@
 body {
     margin: 0;
     background-image: url(./img/bg2-bicubic.jpg);
-    /* background-repeat: no-repeat; */
+    background-repeat: no-repeat;
     min-width: 0px;
+    font-family: 'PT Sans'!important;
+    font-style: normal!important;
+    font-weight: 400!important;
 }
 
 /* ____________INDEX____________ */
@@ -43,22 +46,25 @@ body {
 }
 
 .mainLinks li:hover {
-    background-color: rgb(240, 128, 128);
-    border-radius: 15px;
-    transition: 0.3s ease;
-    text-decoration: none;
-    font-size: 16px;
-    box-shadow: 7px 13px 20px 0px #535151;
-    padding-top: 5px;  
-    padding-bottom: 5px;
-   }
-   .mainLinks li {
-    padding: 5px 14px;
-   }
+ background-color: rgb(240, 128, 128);
+ border-radius: 15px;
+ transition: 0.3s ease;
+ text-decoration: none;
+ font-size: 16px;
+ box-shadow: 7px 13px 20px 0px #535151;
+ padding-top: 5px;  
+ padding-bottom: 5px;
+}
+.mainLinks li {
+ padding: 5px 14px;
+}
 
 .profilePic img{
     margin-right: 16px;
     border-radius: 50%;
+    border: solid coral;
+    border-width: 2px;
+    cursor: pointer;
 }
 
 .mainTaskContainer {
@@ -74,20 +80,47 @@ body {
 
 .task {
     position: relative;
-    height: 90%;
-    min-height: 600px;
+    min-height: 90vh;
     width: 200px;
     background: #ff5a0042;
     margin: 0 8px;
     border-radius: 32px;
     text-align: center;
     color: #7d0000;
-    /* height: fit-content; */
-    
+    cursor: pointer;
+    height: fit-content;
+}
+
+.grab {
+    cursor: move;
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
+
+.grab:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
+
+.grabbable {
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
+
+ /* (Optional) Apply a "closed-hand" cursor during drag operation. */
+.grabbable:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
 }
 
 .task h5{
     font-weight: bold;
+    font-family: 'PT Sans'!important;
 }
 
 .dnone {
@@ -132,12 +165,16 @@ body {
 }
 
 /* ____________BACKLOG____________ */
-
+.headline {
+    margin: 48px;
+    margin-left: 28px;
+}
 .headline span{
-    color: #7d0000;
+    color: #ff9900;
 }
 
 .headline h3 {
+    font-family: 'PT Sans'!important;
     font-weight: bold;  
     margin-bottom: 0px;
 }
@@ -151,6 +188,7 @@ body {
 }
 
 .tableDiv {
+    font-family: 'PT Sans'!important;
     display: flex;
     justify-content: center;
 }
@@ -159,9 +197,11 @@ body {
     -webkit-border-horizontal-spacing: 0;
     -webkit-border-vertical-spacing: 12px;
     margin: 30px;
+    font-family: 'PT Sans'!important;
 }
 
 table td:first-child {
+    font-family: 'PT Sans'!important;
     display: flex;
     text-align: center;
     border-top-left-radius: 10px;
@@ -187,7 +227,26 @@ td {
 
 .taskCreator {
     padding: 2px;
+    font-family: 'PT Sans'!important;
 }
+
+/* ____________RESPONSIVE____________ */
+
+@media only screen and (max-width: 1062px) {
+    .mainTaskContainer {
+        flex-direction: row;
+        padding: 8px;
+        height: fit-content;
+    }
+    .task {
+        min-height: 400px;
+        margin: 8px
+    }
+    .logo1 {
+        height: 50px;
+    }
+}
+
 
 /* ____________RESPONSIVE____________ */
 
@@ -233,8 +292,8 @@ td {
     text-decoration: none;
     font-size: 30px;
     box-shadow: 7px 13px 20px 0px #535151;
-    padding-top: 5px;  
-    padding-bottom: 5px;
+    padding-top: 15px;      
+    padding-bottom: 15px;
 }
 
 .imprint {
