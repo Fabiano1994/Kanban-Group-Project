@@ -1,5 +1,5 @@
 
-let selected = [];
+let selected;
 let tasks = [];
 let actualEdit;
 let currentDrop;
@@ -45,7 +45,7 @@ async function addTask() {
         "urgency": urgency.value,
         "id": tasks.length,
         "status": 0,
-        "assigned": users[selected[0]]
+        "assigned": users[selected]
     };
     tasks.push(taskNew);
     saveTasks();
@@ -120,7 +120,7 @@ async function showLogs() {
                 <td class="">${tasks[i].category}</td>
                 <td class="">${tasks[i].title}</td>
                 <td class="">${tasks[i].urgency}</td>
-                <td class="" onclick="showTasks(${i})"><img class="boardImg" src="./img/zoom.ico" title="view details"></td>
+                <td class="" onclick="editTask(${i})"><img class="boardImg" src="./img/zoom.ico" title="view details / edit"></td>
                 <td class="" onclick="changeCat(${i})"><img class="boardImg" src="./img/plus.ico" title="add to board"></td>
                 <td class="" onclick="delLog(${i})"><img class="boardImg" src="./img/trash.ico" title="delete"></td>
             </tr>
@@ -162,16 +162,14 @@ async function saveTasks() {
 }
 
 function selectAv(i) {
-    if (selected.includes(i)) {
-        selected = selected.filter (a => a != i);
-    } else {
-        selected.push(i);
-    }
-    document.getElementById('assignedProfilePicture'+i).classList.toggle('selAv');
+    selected = i;
+    resetAV();
+    document.getElementById('assignedProfilePicture'+i).classList.add('selAv');
 }
 
 function editTask(i) {
     resetAV();
+    setMinDate();
     document.getElementById('addTaskSection').classList.remove('dnone');
     document.getElementById('titleInputField').value = tasks[i].title;
     document.getElementById('selection').value = tasks[i].category;
@@ -195,16 +193,26 @@ async function saveEdit() {
     tasks[actualEdit].description = document.getElementById('txtDescription').value;
     tasks[actualEdit].date = document.getElementById('dueDate').value;
     tasks[actualEdit].urgency = document.getElementById('urgency').value;
-    if (selected[0]){
-        tasks[actualEdit].assigned = users[selected[0]];
+    if (selected){
+        tasks[actualEdit].assigned = users[selected];
     } else {
         tasks[actualEdit].assigned = users[0];
     }
     document.getElementById('addTaskSection').classList.add('dnone');
     await saveTasks();
-    showTasks();
+    if (document.getElementById('task1')){
+        await showTasks();
+    }
+    if (document.getElementById('logs')){
+        await showLogs();
+    }
 }
 
 function closeWindow() {
     document.getElementById('addTaskSection').classList.add('dnone');
+}
+
+function setMinDate() {
+    var today = new Date().toISOString().split('T')[0];
+    document.getElementById('dueDate').setAttribute('min', today);
 }

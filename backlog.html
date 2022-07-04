@@ -21,70 +21,125 @@
 </head>
 
 <body onload="showLogs()">
-    
+
     <nav class="navbar">
         <!-- LOGO -->
         <div class="logo"><img src="./img/logo.png"></div>
         <!-- NAVIGATION MENU -->
         <ul class="nav-links">
-          <!-- USING CHECKBOX HACK -->
-          <input type="checkbox" id="checkbox_toggle" />
-          <label for="checkbox_toggle" class="hamburger"><img class="hamburger-box" src="./img/list.png"></label>
-          <!-- NAVIGATION MENUS -->
-          <div class="menu">
-            <li><a href="./index.html">Board</a></li>
-            <li><a href="./backlog.html">Backlog</a></li>
-            <li><a href="./addTaskIndex.html">Add Task</a></li>
-            <li><a href="/">Help</a></li>
-          </div>
+            <!-- USING CHECKBOX HACK -->
+            <input type="checkbox" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger"><img class="hamburger-box" src="./img/list.png"></label>
+            <!-- NAVIGATION MENUS -->
+            <div class="menu">
+                <li><a href="./index.html">Board</a></li>
+                <li><a href="./backlog.html">Backlog</a></li>
+                <li><a href="./addTaskIndex.html">Add Task</a></li>
+                <li><a href="/">Help</a></li>
+            </div>
         </ul>
-      </nav>
-        <div class="mainPage">
-            <div class="sideBar">
-                <div class="logo"><img src="./img/logo.png" alt=""></div>
-                <div class="navBar">
-                    <div class="mainLinks">
-                        <li><a href="./index.html">Board</a></li>
-                        <li><a href="./backlog.html">Backlog</a></li>
-                        <li><a href="./addTaskIndex.html">Add Task</a></li>
-                        <li><a href="/">Help</a></li>
-                      </div>
+    </nav>
+    <div class="mainPage">
+        <div class="sideBar">
+            <div class="logo"><img src="./img/logo.png" alt=""></div>
+            <div class="navBar">
+                <div class="mainLinks">
+                    <li><a href="./index.html">Board</a></li>
+                    <li><a href="./backlog.html">Backlog</a></li>
+                    <li><a href="./addTaskIndex.html">Add Task</a></li>
+                    <li><a href="/">Help</a></li>
                 </div>
-                <div class="profilePic"><img id="profilePic" src="./img/profilePic3.jpg"></div>
             </div>
+            <div class="profilePic"><img id="profilePic" src="./img/profilePic3.jpg"></div>
+        </div>
 
-            <div id="backlogDiv">
-                <div class="headline">
-                    <h3>Backlog</h3>
-                    <span class="backlogInfo">Learning Management System Project.</span>
+        <div id="backlogDiv">
+            <div class="headline">
+                <h3>Backlog</h3>
+                <span class="backlogInfo">Learning Management System Project.</span>
+            </div>
+            <div class="tableDiv">
+                <table>
+                    <thead>
+                        <tr id="tableHeader">
+                            <th class="assignedTo">ASSIGNED TO &nbsp</th>
+                            <th class="category">CATEGORY &nbsp</th>
+                            <th class="details">DETAILS &nbsp</th>
+                            <th class="priority">PRIORITY</th>
+                        </tr>
+                    </thead>
+                    <tbody id="logs" class="backlogContent">
+                        <tr>
+                            <td class="taskCreator">
+                                <img src="./img/profilePic2.jpg">
+                                &nbsp&nbsp&nbsp
+                                <div class="name">
+                                    <span>Max Mustermann</span>
+                                </div>
+                            </td>
+                            <td class="">(Category Class)</td>
+                            <td class="">(description of details)</td>
+                            <td class="">add to board</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div id="addTaskSection" class="dnone popup">
+        
+        <form id="addTaskInputs" onsubmit="return false">
+            
+            <div class="leftInputs">
+                <div class="inputField">
+                    <label for="titleInputField" required>TITLE</label>
+                    <input id="titleInputField" type="text" required>
                 </div>
-                <div class="tableDiv">
-                    <table>
-                        <thead>
-                            <tr id="tableHeader">
-                                <th class="assignedTo">ASSIGNED TO &nbsp</th>
-                                <th class="category">CATEGORY &nbsp</th>
-                                <th class="details">DETAILS &nbsp</th>
-                                <th class="priority">PRIORITY</th>
-                            </tr>
-                        </thead>
-                        <tbody id="logs" class="backlogContent">
-                            <tr>
-                                <td class="taskCreator">
-                                    <img src="./img/profilePic2.jpg">
-                                    &nbsp&nbsp&nbsp
-                                    <div class="name">
-                                        <span>Max Mustermann</span>
-                                    </div>
-                                </td>
-                                <td class="">(Category Class)</td>
-                                <td class="">(description of details)</td>
-                                <td class="">add to board</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="inputField">
+                    <label for="categorySelection">CATEGORY</label>
+                    <select class="categorySelect" id="selection">
+                        <option value="">- please select -</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Product">Product</option>
+                        <option value="Sale">Sale</option>
+                        <option value="Management">Management</option>
+                    </select>
+                </div>
+                <div class="inputField">
+                    <label for="textDescription" required>DESCRIPTION</label>
+                    <textarea id="txtDescription" cols="20" rows="8" required=""></textarea>
                 </div>
             </div>
+            <div class="rightInputs">
+                <div class="inputField">
+                    <label for="dueDate">DUE DATE</label>
+                    <input id="dueDate" type="date">
+                </div>
+                <div class="inputField">
+                    <label for="urgency" required>URGENCY</label>
+                        <select id="urgency" required="">
+                            <option value="">- please select -</option>
+                            <option value="important">Important</option>
+                            <option value="high">High</option>
+                            <option value="medium">Medium</option>
+                            <option value="low">Low</option>
+                        </select> 
+                </div>
+                <div class="inputField">
+                    <label for="assignedProfile">ASSIGNED TO</label>
+                    <div id="assignedProfile" class="clerk" data-tooltip="person">
+                        <img id="assignedProfilePicture0" class="avatar" src="./img/profilePic1.jpg" onclick="selectAv(0)" alt="person">
+                        <img id="assignedProfilePicture1" class="avatar" src="./img/profilePic2.jpg" onclick="selectAv(1)" alt="person">
+                        <img id="assignedProfilePicture2" class="avatar" src="./img/profilePic3.jpg" onclick="selectAv(2)" alt="person">
+                    </div>
+                    <div class="taskButtons">
+                        <button id="cancelButton" type="reset" onclick="closeWindow()">CANCEL</button>
+                        <button id="createTaskButton" type="submit" onclick="saveEdit()">Save</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
 </body>
 
 </html>
