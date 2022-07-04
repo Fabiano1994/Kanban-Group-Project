@@ -78,7 +78,7 @@ async function showTasks() {
                 <div class="taskDate">
                     <p>${tasks[i].date}</p>
                     <img class="taskIcons" src="./img/trash.ico" onclick="delTask(${i})" title="remove task">
-                    <img class="taskIcons" src="./img/edit.ico" onclick="editTask(${i})" title="edit task">
+                    <img class="taskIcons" src="./img/edit.ico" onclick="editTask(${i})" title="view/edit task">
                 </div>
             </div>
             
