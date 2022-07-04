@@ -10,7 +10,6 @@
     <script src="./main.js"></script>
     <script src="./mini_backend.js"></script>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="navbar-style.css">
     <link rel="stylesheet" href="addTaskStyle.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
@@ -19,33 +18,42 @@
 </head>
 
 <body onload="showTasks()">
-    <nav class="navbar">
-        <!-- LOGO -->
-        <div class="logo"><img src="./img/logo.png"></div>
-        <!-- NAVIGATION MENU -->
-        <ul class="nav-links">
-          <!-- USING CHECKBOX HACK -->
-          <input type="checkbox" id="checkbox_toggle" />
-          <label for="checkbox_toggle" class="hamburger"><img class="hamburger-box" src="./img/list.png"></label>
-          <!-- NAVIGATION MENUS -->
-          <div class="menu">
-            <li><a href="./index.html">Board</a></li>
-            <li><a href="./backlog.html">Backlog</a></li>
-            <li><a href="./addTaskIndex.html">Add Task</a></li>
-            <li><a href="/">Help</a></li>
-          </div>
-        </ul>
-      </nav>
+    <div class="bgMainPage">
+        <div class="header">
+            <a href="index.html" class="logo">
+                <img class="logo1" src="./img/logo.png">
+            </a>
+            <div class="dropstyle">
+                <nav>
+                    <label for="touch"><img id="listbox" src="./img/list.png"></label>
+                    <input type="checkbox" id="touch">
+
+                    <ul class="slide">
+                        <a href="index.html">Board</a>
+                        <a href="backlog.html">Backlog</a>
+                        <a href="addTaskIndex.html">Add Task</a>
+                        <a href="info.html">Info</a>
+                    </ul>
+
+                </nav>
+            </div>
+            <div class="header-right">
+                <a href="index.html">Board</a>
+                <a href="backlog.html">Backlog</a>
+                <a href="addTaskIndex.html">Add Task</a>
+                <a href="info.html">Info</a>
+            </div>
+        </div>
         <div class="mainPage">
             <div class="sideBar">
                 <div class="logo"><img src="./img/logo.png" alt=""></div>
                 <div class="navBar">
-                    <div class="mainLinks">
-                        <li><a href="./index.html">Board</a></li>
-                        <li><a href="./backlog.html">Backlog</a></li>
-                        <li><a href="./addTaskIndex.html">Add Task</a></li>
-                        <li><a href="/">Help</a></li>
-                      </div>
+                    <span class="mainLinks">
+                        <a href="index.html">Board</a>
+                        <a href="backlog.html">Backlog</a>
+                        <a href="addTaskIndex.html">Add Task</a>
+                        <a href="info.html">Info</a>
+                    </span>
                 </div>
                 <div class="profilePic"><img id="profilePic" src="./img/profilePic3.jpg"></div>
             </div>

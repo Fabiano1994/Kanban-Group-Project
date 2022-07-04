@@ -1,7 +1,7 @@
 body {
     margin: 0;
     background-image: url(./img/bg2-bicubic.jpg);
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     min-width: 0px;
 }
 
@@ -43,18 +43,18 @@ body {
 }
 
 .mainLinks li:hover {
- background-color: rgb(240, 128, 128);
- border-radius: 15px;
- transition: 0.3s ease;
- text-decoration: none;
- font-size: 16px;
- box-shadow: 7px 13px 20px 0px #535151;
- padding-top: 5px;  
- padding-bottom: 5px;
-}
-.mainLinks li {
- padding: 5px 14px;
-}
+    background-color: rgb(240, 128, 128);
+    border-radius: 15px;
+    transition: 0.3s ease;
+    text-decoration: none;
+    font-size: 16px;
+    box-shadow: 7px 13px 20px 0px #535151;
+    padding-top: 5px;  
+    padding-bottom: 5px;
+   }
+   .mainLinks li {
+    padding: 5px 14px;
+   }
 
 .profilePic img{
     margin-right: 16px;
@@ -204,4 +204,44 @@ td {
     .logo1 {
         height: 50px;
     }
+}
+
+/* ____________INFO____________ */
+
+.infoText {
+    display: flex;
+    align-items: center;
+    padding: 24px;
+}
+
+.infoText h4{
+    font-weight: bold;
+}
+
+.imprintPrivacy {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: x-large;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.imprintPrivacy a:hover {
+    background-color: rgb(240, 128, 128);
+    border-radius: 15px;
+    transition: 0.3s ease;
+    text-decoration: none;
+    font-size: 30px;
+    box-shadow: 7px 13px 20px 0px #535151;
+    padding-top: 5px;  
+    padding-bottom: 5px;
+}
+
+.imprint {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+    padding: 30px;
+    max-width: 1000px;
 }
