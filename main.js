@@ -60,7 +60,7 @@ async function addTask() {
 async function showTasks() {
     await init();
     console.log(tasks);
-    for (i = 1; i < 5; i++) {
+    for (let i = 1; i < 5; i++) {
         document.getElementById('task' + i).innerHTML = '';
     }
     for (i = 0; i < tasks.length; i++) {
@@ -94,7 +94,7 @@ function drag(id) {
 
 function allowDrop(ev) {
     ev.preventDefault();
-  }
+}
   
 
 async function moveTo (i) {
