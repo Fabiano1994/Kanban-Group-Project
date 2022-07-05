@@ -117,8 +117,8 @@ async function showLogs() {
                         <span>${tasks[i].assigned.name}</span>
                     </div>
                 </td>
-                <td class="">${tasks[i].category}</td>
-                <td class="">${tasks[i].title}</td>
+                <td class="cc1">${tasks[i].category}</td>
+                <td class="dd1">${tasks[i].title}</td>
                 <td class="">${tasks[i].urgency}</td>
                 <td class="" onclick="editTask(${i})"><img class="boardImg" src="./img/zoom.ico" title="view details / edit"></td>
                 <td class="" onclick="changeCat(${i})"><img class="boardImg" src="./img/plus.ico" title="add to board"></td>

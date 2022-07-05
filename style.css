@@ -89,7 +89,7 @@ body {
     text-align: center;
     color: #7d0000;
     cursor: pointer;
-
+    
     overflow-y: auto;
     overflow-x: hidden;
     scrollbar-color: #7d0000 #ff5a0042;
@@ -240,9 +240,10 @@ table td:first-child {
     text-align: center;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    border-left: 10px solid #7d0000;
-    height: 60px;
+    border-left: 15px solid #7d0000;
+    height: 80px;
     align-items: center;
+    margin-left: -9px;
 }
 
 table td:last-child {
@@ -275,11 +276,25 @@ td {
 
     .task {
         min-height: 400px;
-        margin: 8px
+        max-height: 600px;
+        margin: 8px;
     }
 
     .logo1 {
         height: 50px;
+    }
+
+    .details {
+        display: none;
+    }
+    .category {
+        display: none;
+    }
+    .dd1 {
+        display: none;
+    }
+    .cc1 {
+        display: none;
     }
 }
 
@@ -291,6 +306,9 @@ td {
         flex-direction: row;
         padding: 8px;
         height: fit-content;
+    }
+    body {
+        background-size: 3000px;
     }
 
     .task {
@@ -307,8 +325,9 @@ td {
 
 .infoText {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     padding: 24px;
+    flex-direction: column;
 }
 
 .infoText h4 {
@@ -341,4 +360,10 @@ td {
     text-align: left;
     padding: 30px;
     max-width: 1000px;
+    padding-left: 150px;
+}
+
+.headcont {
+    margin: -27px;
+    padding-top: 50px;
 }
