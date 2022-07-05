@@ -193,6 +193,10 @@ body {
     word-wrap: break-word;
 }
 
+.dragAreaHighlight {
+    background: #FF9D66;
+}
+
 /* ____________BACKLOG____________ */
 .headline {
     margin: 48px;

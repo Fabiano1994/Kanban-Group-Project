@@ -53,20 +53,20 @@
             </div>
 
             <div class="mainTaskContainer">
-                <div class="task" ondragover="allowDrop(event)"  ondrop="moveTo(1)">
+                <div id="task_1" class="task" ondragover="allowDrop(event); addHighlight('task_1')" ondragleave="removeHighlight()" ondragend="removeHighlight()" ondrop="moveTo(1);">
                     <h5>To do</h5>
                     <div class="grab" id="task1"  ></div>
                     
                 </div>
-                <div class="task" ondragover="allowDrop(event)" ondrop="moveTo(2)">
+                <div id="task_2" class="task" ondragover="allowDrop(event); addHighlight('task_2')" ondragleave="removeHighlight()" ondragend="removeHighlight()" ondrop="moveTo(2)">
                     <h5>In Progress</h5>
                     <div class="grab" id="task2"  ></div>
                 </div>
-                <div class="task" ondragover="allowDrop(event)" ondrop="moveTo(3)">
+                <div id="task_3" class="task" ondragover="allowDrop(event); addHighlight('task_3')" ondragleave="removeHighlight()" ondragend="removeHighlight()" ondrop="moveTo(3)">
                     <h5>Testing</h5>
                     <div class="grab" id="task3"  ></div>
                 </div>
-                <div class="task" ondragover="allowDrop(event)" ondrop="moveTo(4)">
+                <div id="task_4" class="task" ondragover="allowDrop(event); addHighlight('task_4')" ondragleave="removeHighlight()" ondragend="removeHighlight()" ondrop="moveTo(4)">
                     <h5>Done</h5>
                     <div class="grab" id="task4"  ></div>
                 </div>

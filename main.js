@@ -216,3 +216,14 @@ function setMinDate() {
     var today = new Date().toISOString().split('T')[0];
     document.getElementById('dueDate').setAttribute('min', today);
 }
+
+function addHighlight(id) {
+    document.getElementById(id).classList.add('dragAreaHighlight');
+}
+
+function removeHighlight() {
+    document.getElementById('task_1').classList.remove('dragAreaHighlight');
+    document.getElementById('task_2').classList.remove('dragAreaHighlight');
+    document.getElementById('task_3').classList.remove('dragAreaHighlight');
+    document.getElementById('task_4').classList.remove('dragAreaHighlight');
+}
