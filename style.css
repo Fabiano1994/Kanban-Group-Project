@@ -46,7 +46,7 @@ body {
 }
 
 .mainLinks li:hover {
-    background-color: rgb(240, 128, 128);
+    background-color: #FF9B67;
     border-radius: 15px;
     transition: 0.3s ease;
     text-decoration: none;
@@ -99,22 +99,15 @@ body {
 ::-webkit-scrollbar {
     width: 5px;
     height: 50px;
-    /* width of the entire scrollbar */
 }
 
 ::-webkit-scrollbar-track {
     background: #ff5a0042;
-    
-    /* color of the tracking area */
 }
 
 ::-webkit-scrollbar-thumb {
     background-color: #7d0000;
-    /* color of the scroll thumb */
     border-radius: 20px;
-    
-   
-
 }
 
 
@@ -133,13 +126,11 @@ body {
 
 .grabbable {
     cursor: move;
-    /* fallback if grab cursor is unsupported */
     cursor: grab;
     cursor: -moz-grab;
     cursor: -webkit-grab;
 }
 
-/* (Optional) Apply a "closed-hand" cursor during drag operation. */
 .grabbable:active {
     cursor: grabbing;
     cursor: -moz-grabbing;
@@ -287,15 +278,10 @@ td {
         display: none;
     }
 
-    /* .details {
-        display: none;
-    } */
     .category {
         display: none;
     }
-    /* .dd1 {
-        display: none;
-    } */
+
     .cc1 {
         display: none;
     }
