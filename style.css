@@ -284,16 +284,23 @@ td {
         height: 50px;
     }
 
-    .details {
+    .priority {
         display: none;
     }
+
+    /* .details {
+        display: none;
+    } */
     .category {
         display: none;
     }
-    .dd1 {
+    /* .dd1 {
+        display: none;
+    } */
+    .cc1 {
         display: none;
     }
-    .cc1 {
+    .pp1 {
         display: none;
     }
 }
