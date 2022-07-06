@@ -120,7 +120,7 @@ function allowDrop(ev) {
 }
   
 /**
- * This function saves the dragged card in the highlightet container and reloads the screen.
+ * This function saves the dragged card in the highlighted container and reloads the screen.
  * 
  * @param {integer} i - This is the index of the container that got the drop.
  *  
@@ -300,7 +300,7 @@ function setMinDate() {
 }
 
 /**
- * This function highlights the container, which is beeing draggedover
+ * This function highlights the container, which is beeing dragged over
  * 
  * @param {integer} id - This is the index of the container that shall be highlighted by dragover.
  */

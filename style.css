@@ -75,7 +75,6 @@ body {
     margin: 30px;
     margin-bottom: 0px !important;
     margin-top: 0px !important;
-    /* height: fit-content; */
     flex-flow: wrap;
 }
 
@@ -354,10 +353,8 @@ td {
     border-radius: 15px;
     transition: 0.3s ease;
     text-decoration: none;
-    font-size: 30px;
     box-shadow: 7px 13px 20px 0px #535151;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding: 6px;
 }
 
 .imprint {

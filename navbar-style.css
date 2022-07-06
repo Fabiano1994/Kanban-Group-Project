@@ -53,8 +53,6 @@
     text-decoration: none;
     font-size: 16px;
     box-shadow: 7px 13px 20px 0px #535151;
-    padding-top: 15px;  
-    padding-bottom: 15px;
    }
    .menu li {
     padding: 5px 14px;
@@ -64,8 +62,7 @@
     position: relative; 
    }
    .dropdown {
-    background-image: url(./img/bg.jpg);
-    background-position: 70%;
+    background-color: #FE668F;
     padding: 1em 0;
     position: absolute; /*WITH RESPECT TO PARENT*/
     display: none;
@@ -81,7 +78,7 @@
     text-align: center;
    }
    .dropdown li:hover {
-    background-image: url(./img/bg.jpg);
+    background-color: #FE668F;
    }
    .services:hover .dropdown {
     display: block;
@@ -104,16 +101,14 @@ input[type=checkbox]{
    .menu { 
     display:none;
     position: absolute;
-    background-image: url(./img/bg.jpg);
-    background-position: 62%;
+    background-color: #FE668F;
     right: 0;
     text-align: center;
     padding: 16px 0;
-    border-radius: 10%;
+    border-radius: 14px;
    }
    .menu li:hover {
-    display: inline-block;
-    background-image: url(./img/bg.jpg);
+    background-color: #fc4a79;
     transition: 0.3s ease;
    }
    .menu li + li {
