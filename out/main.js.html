@@ -1,4 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: main.js</title>
 
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: main.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>
 let selected;
 let tasks = [];
 let actualEdit;
@@ -71,27 +99,27 @@ async function addTask() {
 async function showTasks() {
     await init();
     console.log(tasks);
-    for (let i = 1; i < 5; i++) {
+    for (let i = 1; i &lt; 5; i++) {
         document.getElementById('task' + i).innerHTML = '';
     }
-    for (i = 0; i < tasks.length; i++) {
+    for (i = 0; i &lt; tasks.length; i++) {
         if (tasks[i].status > 0) {
             document.getElementById('task' + (tasks[i].status)).innerHTML += `
-            <div id="tasks${i}" draggable="true" ondragstart="drag(${i})">
-                <div >
-                    <div id="" class="newTask" " ondblclick="showInputForm()"
+            &lt;div id="tasks${i}" draggable="true" ondragstart="drag(${i})">
+                &lt;div >
+                    &lt;div id="" class="newTask" " ondblclick="showInputForm()"
                         title="double-click for edit!">
-                        <img class="profilePicTask" id="profilePic" src="${tasks[i].assigned.profPic}">
-                    <div>
-                    <h5 class="descriptionHeader">${tasks[i].title}</h5>
-                    <p class="description">${tasks[i].description}</p>
-                </div>
-                <div class="taskDate">
-                    <p>${tasks[i].date}</p>
-                    <img class="taskIcons" src="./img/trash.ico" onclick="delTask(${i})" title="remove task">
-                    <img class="taskIcons" src="./img/edit.ico" onclick="editTask(${i})" title="view/edit task">
-                </div>
-            </div>
+                        &lt;img class="profilePicTask" id="profilePic" src="${tasks[i].assigned.profPic}">
+                    &lt;div>
+                    &lt;h5 class="descriptionHeader">${tasks[i].title}&lt;/h5>
+                    &lt;p class="description">${tasks[i].description}&lt;/p>
+                &lt;/div>
+                &lt;div class="taskDate">
+                    &lt;p>${tasks[i].date}&lt;/p>
+                    &lt;img class="taskIcons" src="./img/trash.ico" onclick="delTask(${i})" title="remove task">
+                    &lt;img class="taskIcons" src="./img/edit.ico" onclick="editTask(${i})" title="view/edit task">
+                &lt;/div>
+            &lt;/div>
             
         `
         };
@@ -139,24 +167,24 @@ async function moveTo (i) {
 async function showLogs() {
     await init();
     document.getElementById('logs').innerHTML =``;
-    for (i = 0; i < tasks.length; i++) {
+    for (i = 0; i &lt; tasks.length; i++) {
         if (tasks[i].status == 0) {
             document.getElementById('logs').innerHTML += `
-            <tr class="${tasks[i].urgency}">
-                <td class="taskCreator ">
-                    <img src="${tasks[i].assigned.profPic}">
-                    &nbsp&nbsp&nbsp
-                    <div class="name">
-                        <span>${tasks[i].assigned.name}</span>
-                    </div>
-                </td>
-                <td class="cc1">${tasks[i].category}</td>
-                <td class="dd1">${tasks[i].title}</td>
-                <td class="pp1">${tasks[i].urgency}</td>
-                <td class="" onclick="editTask(${i})"><img class="boardImg" src="./img/zoom.ico" title="view details / edit"></td>
-                <td class="" onclick="changeCat(${i})"><img class="boardImg" src="./img/plus.ico" title="add to board"></td>
-                <td class="" onclick="delLog(${i})"><img class="boardImg" src="./img/trash.ico" title="delete"></td>
-            </tr>
+            &lt;tr class="${tasks[i].urgency}">
+                &lt;td class="taskCreator ">
+                    &lt;img src="${tasks[i].assigned.profPic}">
+                    &amp;nbsp&amp;nbsp&amp;nbsp
+                    &lt;div class="name">
+                        &lt;span>${tasks[i].assigned.name}&lt;/span>
+                    &lt;/div>
+                &lt;/td>
+                &lt;td class="cc1">${tasks[i].category}&lt;/td>
+                &lt;td class="dd1">${tasks[i].title}&lt;/td>
+                &lt;td class="pp1">${tasks[i].urgency}&lt;/td>
+                &lt;td class="" onclick="editTask(${i})">&lt;img class="boardImg" src="./img/zoom.ico" title="view details / edit">&lt;/td>
+                &lt;td class="" onclick="changeCat(${i})">&lt;img class="boardImg" src="./img/plus.ico" title="add to board">&lt;/td>
+                &lt;td class="" onclick="delLog(${i})">&lt;img class="boardImg" src="./img/trash.ico" title="delete">&lt;/td>
+            &lt;/tr>
             `
         }
     }
@@ -169,7 +197,7 @@ async function showLogs() {
  */
 
 async function changeCat(i) {
-    if (tasks[i].status < 4) {
+    if (tasks[i].status &lt; 4) {
         tasks[i].status++;
     } else {
         delTask(i);
@@ -318,4 +346,26 @@ function removeHighlight() {
     document.getElementById('task_2').classList.remove('dragAreaHighlight');
     document.getElementById('task_3').classList.remove('dragAreaHighlight');
     document.getElementById('task_4').classList.remove('dragAreaHighlight');
-}
+}</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#addHighlight">addHighlight</a></li><li><a href="global.html#addTask">addTask</a></li><li><a href="global.html#allowDrop">allowDrop</a></li><li><a href="global.html#changeCat">changeCat</a></li><li><a href="global.html#closeWindow">closeWindow</a></li><li><a href="global.html#delLog">delLog</a></li><li><a href="global.html#delTask">delTask</a></li><li><a href="global.html#drag">drag</a></li><li><a href="global.html#editTask">editTask</a></li><li><a href="global.html#init">init</a></li><li><a href="global.html#loadJSONFromServer">loadJSONFromServer</a></li><li><a href="global.html#moveTo">moveTo</a></li><li><a href="global.html#removeHighlight">removeHighlight</a></li><li><a href="global.html#resetAV">resetAV</a></li><li><a href="global.html#saveEdit">saveEdit</a></li><li><a href="global.html#saveJSONToServer">saveJSONToServer</a></li><li><a href="global.html#saveTasks">saveTasks</a></li><li><a href="global.html#selectAv">selectAv</a></li><li><a href="global.html#setMinDate">setMinDate</a></li><li><a href="global.html#showLogs">showLogs</a></li><li><a href="global.html#showTasks">showTasks</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.10</a> on Wed Jul 06 2022 15:21:31 GMT+0200 (Mitteleuropäische Sommerzeit)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
