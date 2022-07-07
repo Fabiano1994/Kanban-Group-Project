@@ -262,6 +262,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
     }
     .imprint {
         padding-left: 10px; }
+        .popup {
+
+            left: 8%;
+        }
 
 }
 

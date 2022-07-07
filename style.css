@@ -152,8 +152,10 @@ body {
 
 .popup {
     z-index: 2;
-    position: absolute;
-    top: 20%;
+    position: fixed;
+    top: 19%;
+    /* top: 138px; */
+    left: 18%;
 }
 
 /* ____________BOARD____________ */
