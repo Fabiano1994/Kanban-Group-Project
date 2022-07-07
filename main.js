@@ -55,7 +55,7 @@ async function addTask() {
         "assigned": users[selected]
     };
     tasks.push(taskNew);
-    saveTasks();
+    await saveTasks();
     document.getElementById('titleInputField').value='';
     document.getElementById('selection').value='';
     document.getElementById('txtDescription').value='';
