@@ -17,6 +17,9 @@ body {
 .mainPage {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    padding-top: 46px;
+    padding-bottom: 46px;
 }
 
 .sideBar {
@@ -46,7 +49,7 @@ body {
 }
 
 .mainLinks li:hover {
-    background-color: rgb(240, 128, 128);
+    background-color: #FF9B67;
     border-radius: 15px;
     transition: 0.3s ease;
     text-decoration: none;
@@ -75,7 +78,6 @@ body {
     margin: 30px;
     margin-bottom: 0px !important;
     margin-top: 0px !important;
-    /* height: fit-content; */
     flex-flow: wrap;
 }
 
@@ -100,22 +102,15 @@ body {
 ::-webkit-scrollbar {
     width: 5px;
     height: 50px;
-    /* width of the entire scrollbar */
 }
 
 ::-webkit-scrollbar-track {
     background: #ff5a0042;
-    
-    /* color of the tracking area */
 }
 
 ::-webkit-scrollbar-thumb {
     background-color: #7d0000;
-    /* color of the scroll thumb */
     border-radius: 20px;
-    
-   
-
 }
 
 
@@ -134,13 +129,11 @@ body {
 
 .grabbable {
     cursor: move;
-    /* fallback if grab cursor is unsupported */
     cursor: grab;
     cursor: -moz-grab;
     cursor: -webkit-grab;
 }
 
-/* (Optional) Apply a "closed-hand" cursor during drag operation. */
 .grabbable:active {
     cursor: grabbing;
     cursor: -moz-grabbing;
@@ -203,7 +196,17 @@ body {
     margin-left: 28px;
 }
 
+.headline1 h3{
+margin-top: 0px;
+font-family: 'PT Sans' !important;
+font-weight: bold;
+margin-bottom: 0px;
+}
+
 .headline span {
+    color: #ff9900;
+}
+.headline1 span {
     color: #ff9900;
 }
 
@@ -288,15 +291,10 @@ td {
         display: none;
     }
 
-    /* .details {
-        display: none;
-    } */
     .category {
         display: none;
     }
-    /* .dd1 {
-        display: none;
-    } */
+
     .cc1 {
         display: none;
     }
@@ -354,10 +352,8 @@ td {
     border-radius: 15px;
     transition: 0.3s ease;
     text-decoration: none;
-    font-size: 30px;
     box-shadow: 7px 13px 20px 0px #535151;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding: 6px;
 }
 
 .imprint {
@@ -370,7 +366,4 @@ td {
     padding-left: 150px;
 }
 
-.headcont {
-    margin: -27px;
-    padding-top: 50px;
-}
+

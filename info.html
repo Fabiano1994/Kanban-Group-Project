@@ -10,6 +10,7 @@
     <script src="./main.js"></script>
     <script src="./mini_backend.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="privacysidebar.css">
     <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="navbar-style.css">
     <link rel="stylesheet" href="addTaskStyle.css">
@@ -26,85 +27,91 @@
         <div class="logo"><img src="./img/logo.png"></div>
         <!-- NAVIGATION MENU -->
         <ul class="nav-links">
-          <!-- USING CHECKBOX HACK -->
-          <input type="checkbox" id="checkbox_toggle" />
-          <label for="checkbox_toggle" class="hamburger"><img class="hamburger-box" src="./img/list.png"></label>
-          <!-- NAVIGATION MENUS -->
-          <div class="menu">
-            <li><a href="./index.html">Board</a></li>
-            <li><a href="./backlog.html">Backlog</a></li>
-            <li><a href="./addTaskIndex.html">Add Task</a></li>
-            <li><a href="./info.html">Info</a></li>
-          </div>
-        </ul>
-      </nav>
-        <div class="mainPage">
-            <div class="sideBar">
-                <div class="logo"><img src="./img/logo.png" alt=""></div>
-                <div class="navBar">
-                    <div class="mainLinks">
-                        <li><a href="./index.html">Board</a></li>
-                        <li><a href="./backlog.html">Backlog</a></li>
-                        <li><a href="./addTaskIndex.html">Add Task</a></li>
-                        <li><a href="./info.html">Info</a></li>
-                    </div>
-                </div>
-                <div class="profilePic"><img id="profilePic" src="./img/profilePic3.jpg"></div>
+            <!-- USING CHECKBOX HACK -->
+            <input type="checkbox" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger"><img class="hamburger-box" src="./img/list.png"></label>
+            <!-- NAVIGATION MENUS -->
+            <div class="menu">
+                <li><a href="./index.html">Board</a></li>
+                <li><a href="./backlog.html">Backlog</a></li>
+                <li><a href="./addTaskIndex.html">Add Task</a></li>
+                <li><a href="./info.html">Info</a></li>
             </div>
-            
-            <div class="infoText">
-                <div class="headcont">
-                <div class="headline">
+        </ul>
+    </nav>
+    <div class="sideBar">
+        <div class="logo"><img src="./img/logo.png" alt=""></div>
+        <div class="navBar">
+            <div class="mainLinks">
+                <li><a href="./index.html">Board</a></li>
+                <li><a href="./backlog.html">Backlog</a></li>
+                <li><a href="./addTaskIndex.html">Add Task</a></li>
+                <li><a href="./info.html">Info</a></li>
+            </div>
+        </div>
+        <div class="profilePic"><img id="profilePic" src="./img/profilePic3.jpg"></div>
+    </div>
+    <div class="mainPage">
+        
+
+        <div class="infoText">
+            <div class="headcont">
+                <div class="headline1">
                     <h3>Info</h3>
                     <span class="backlogInfo">Learning Management System Project.</span>
                 </div>
                 </div>
-                <span> 
+         
+            <span>
 
-                    <h4>Board</h4>
-                   
-                    <p> The board consists of four sections. Per drag and drop you can move each task to a different
+                <h4>Board</h4>
+
+                <p> The board consists of four sections. Per drag and drop you can move each task to a different
                     Section.<br>
-                    Further informations can be displayed and also edited by clicking on the pencil icon at the bottom of the task. <br>By
+                    Further informations can be displayed and also edited by clicking on the pencil icon at the bottom
+                    of the task. <br>By
                     clicking the trashcan you can delete the task.<br>
-                    In the 'To Do' section the tasks that are to be processed next are listed. <br>The 'In Progress' section
+                    In the 'To Do' section the tasks that are to be processed next are listed. <br>The 'In Progress'
+                    section
                     lists tasks that are currently being processed.<br>
                     The 'testing' section lists tasks that have been completed but are still being tested for
                     completion.<br> The 'done' section lists tasks that have been successfully tested and thus fully
                     processed.
-                    </p>
-                    
-                    <h4>Backlog</h4>
+                </p>
 
-                    <p>
+                <h4>Backlog</h4>
+
+                <p>
                     Backlog shows every task the team added, except the tasks that are already on the board.<br>
-                    At the beggining of a project you can add all tasks and have an overview of them at the baglock. <br>Afterwards
+                    At the beggining of a project you can add all tasks and have an overview of them at the baglock.
+                    <br>Afterwards
                     you can decide, which tasks your team should work on next and push them to the board.<br>
                     The tasks are colored by urgency. The colors are assigned according
-                    to the traffic-light-system: <br>green (low), yellow (middle), orange (high), red (important).
-                    By clicking the magnifier you can view and edit the task and by clicking the trashcan you can delete the task.
-                    </p>
+                    to the traffic-light-system: <br>green (low), yellow (middle), orange (high), red (important).<br>
+                    By clicking the magnifier you can view and edit the task and by clicking the trashcan you can delete
+                    the task.
+                </p>
 
-                    <h4>Add Task</h4>
+                <h4>Add Task</h4>
 
-                    <p>
+                <p>
                     In the 'Add Task' area you can add individual tasks.<br>
                     Enter title, category, description, due date, importance and assign the task to one user.<br>
                     All fields have to be filled in.
-                    </p>
+                </p>
 
-                    <div class="imprintPrivacy">
-                        <a href="imprint.html">Imprint</a>
-                        <a href="privacy.html">Privacy</a>
-                    </div>
+                <div class="imprintPrivacy">
+                    <a href="imprint.html">Imprint</a>
+                    <a href="privacy.html">Privacy</a>
+                </div>
 
-                </span>
-
-            </div>
+            </span>
 
         </div>
 
-        
+    </div>
+
+
 
 </body>
 

@@ -11,6 +11,7 @@
     <script src="./mini_backend.js"></script>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="privacysidebar.css">
     <link rel="stylesheet" href="addTaskStyle.css">
     <link rel="stylesheet" href="navbar-style.css">
     <link rel="stylesheet" href="logstyle.css">
@@ -40,19 +41,20 @@
             </div>
         </ul>
     </nav>
-    <div class="mainPage">
-        <div class="sideBar">
-            <div class="logo"><img src="./img/logo.png" alt=""></div>
-            <div class="navBar">
-                <div class="mainLinks">
-                    <li><a href="./index.html">Board</a></li>
-                    <li><a href="./backlog.html">Backlog</a></li>
-                    <li><a href="./addTaskIndex.html">Add Task</a></li>
-                    <li><a href="./info.html">Info</a></li>
-                </div>
+    <div class="sideBar">
+        <div class="logo"><img src="./img/logo.png" alt=""></div>
+        <div class="navBar">
+            <div class="mainLinks">
+                <li><a href="./index.html">Board</a></li>
+                <li><a href="./backlog.html">Backlog</a></li>
+                <li><a href="./addTaskIndex.html">Add Task</a></li>
+                <li><a href="./info.html">Info</a></li>
             </div>
-            <div class="profilePic"><img id="profilePic" src="./img/profilePic3.jpg"></div>
         </div>
+        <div class="profilePic"><img id="profilePic" src="./img/profilePic3.jpg"></div>
+    </div>
+    <div class="mainPage">
+        
 
         <div id="backlogDiv">
             <div class="headline">
@@ -65,7 +67,7 @@
                         <tr id="tableHeader">
                             <th class="assignedTo">ASSIGNED TO &nbsp</th>
                             <th class="category">CATEGORY &nbsp</th>
-                            <th class="details">DETAILS &nbsp</th>
+                            <th class="details">TITLE &nbsp</th>
                             <th class="priority">PRIORITY</th>
                         </tr>
                     </thead>
