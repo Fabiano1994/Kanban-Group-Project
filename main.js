@@ -21,18 +21,11 @@ let users = [
     }
 ]
 
-/**
- * This function loads the saved data from the server and creates a JSON
- */
 
 async function init() {
     await downloadFromServer();
     tasks = JSON.parse(backend.getItem('tasks')) || [];
 }
-
-/**
- * This function reads the input from the form and adds it to the JSON
- */
 
 async function addTask() {
     await init();
@@ -64,10 +57,6 @@ async function addTask() {
     resetAV();
 }
 
-/**
- * This function fills the board with the saved tasks, which are already set to board.
- */
-
 async function showTasks() {
     await init();
     console.log(tasks);
@@ -98,43 +87,21 @@ async function showTasks() {
     }
 }
 
-/**
- * This function saves the index of the task we want to drag in a global variable
- * 
- * @param {integer} id - This is the index of the task we want to drag.
- */
-
 function drag(id) {
     currentDrop=id;
     
 }
 
-/**
- * This function allows the container to get the dragged card.
- * 
- * @param {JSON} ev 
- */
-
 function allowDrop(ev) {
     ev.preventDefault();
 }
   
-/**
- * This function saves the dragged card in the highlighted container and reloads the screen.
- * 
- * @param {integer} i - This is the index of the container that got the drop.
- *  
- */
 
 async function moveTo (i) {
     tasks[currentDrop].status = i;
     await saveTasks();
     await showTasks();
 }
-
-/**
- * This function fills the backlog with the saved tasks, which are not set to board yet.
- */
 
 async function showLogs() {
     await init();
@@ -162,11 +129,6 @@ async function showLogs() {
     }
 }
 
-/**
- * This function sets the sellected task from backlog to board by changing its status.
- * 
- * @param {integer} i - This is the index of the taks, which we want to set to board.
- */
 
 async function changeCat(i) {
     if (tasks[i].status < 4) {
@@ -183,23 +145,11 @@ async function changeCat(i) {
     }
 }
 
-/**
- * This function deletes the selected task from the board.
- * 
- * @param {integer} i - This is the index of the task, which we want to delete.
- */
-
 async function delTask(i) {
     tasks.splice(i, 1);
     await saveTasks();
     showTasks();
 }
-
-/**
- * This function deletes the selected task from the backlog.
- * 
- * @param {integer} i - This is the index of the task, which we want to delete.
- */
 
 async function delLog(i) {
     tasks.splice(i, 1);
@@ -207,31 +157,15 @@ async function delLog(i) {
     showLogs();
 }
 
-/**
- * This function saves the tasks on the server.
- */
-
 async function saveTasks() {
     await backend.setItem('tasks', JSON.stringify(tasks));
 }
-
-/**
- * This function adds a circle around the avatar we chose.
- * 
- * @param {integer} i - This is the index of the avatar we chose.
- */
 
 function selectAv(i) {
     selected = i;
     resetAV();
     document.getElementById('assignedProfilePicture'+i).classList.add('selAv');
 }
-
-/**
- * This function opens the edit screen
- * 
- * @param {integer} i - This is the index of the task, which we want to edit.
- */
 
 function editTask(i) {
     resetAV();
@@ -247,19 +181,11 @@ function editTask(i) {
 
 }
 
-/**
- * This function removes all circles around the avatars
- */
-
 function resetAV() {
     document.getElementById('assignedProfilePicture0').classList.remove('selAv');
     document.getElementById('assignedProfilePicture1').classList.remove('selAv');
     document.getElementById('assignedProfilePicture2').classList.remove('selAv');
 }
-
-/**
- * This function saves the edited data to the JSON and to the server and reloads the screen.
- */
 
 async function saveEdit() {
     tasks[actualEdit].title = document.getElementById('titleInputField').value;
@@ -282,36 +208,18 @@ async function saveEdit() {
     }
 }
 
-/**
- * This function closes the edit screen without saving.
- */
-
 function closeWindow() {
     document.getElementById('addTaskSection').classList.add('dnone');
 }
-
-/**
- * This function prevents picking a date earlier than today.
- */
 
 function setMinDate() {
     var today = new Date().toISOString().split('T')[0];
     document.getElementById('dueDate').setAttribute('min', today);
 }
 
-/**
- * This function highlights the container, which is beeing dragged over
- * 
- * @param {integer} id - This is the index of the container that shall be highlighted by dragover.
- */
-
 function addHighlight(id) {
     document.getElementById(id).classList.add('dragAreaHighlight');
 }
-
-/**
- * This function removes the highlight after dragging away or dropping.
- */
 
 function removeHighlight() {
     document.getElementById('task_1').classList.remove('dragAreaHighlight');

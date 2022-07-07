@@ -22,62 +22,62 @@
 
 <body onload="showTasks()">
     <nav class="navbar">
+        <!-- LOGO -->
         <div class="logo"><img src="./img/logo.png"></div>
+        <!-- NAVIGATION MENU -->
         <ul class="nav-links">
-            <input type="checkbox" id="checkbox_toggle" />
-            <label for="checkbox_toggle" class="hamburger"><img class="hamburger-box" src="./img/list.png"></label>
-            <div class="menu">
-                <li><a href="./index.html">Board</a></li>
-                <li><a href="./backlog.html">Backlog</a></li>
-                <li><a href="./addTaskIndex.html">Add Task</a></li>
-                <li><a href="./info.html">Info</a></li>
-            </div>
+          <!-- USING CHECKBOX HACK -->
+          <input type="checkbox" id="checkbox_toggle" />
+          <label for="checkbox_toggle" class="hamburger"><img class="hamburger-box" src="./img/list.png"></label>
+          <!-- NAVIGATION MENUS -->
+          <div class="menu">
+            <li><a href="./index.html">Board</a></li>
+            <li><a href="./backlog.html">Backlog</a></li>
+            <li><a href="./addTaskIndex.html">Add Task</a></li>
+            <li><a href="./info.html">Info</a></li>
+          </div>
         </ul>
-    </nav>
-    <div class="mainPage">
-        <div class="sideBar">
-            <div class="logo"><img src="./img/logo.png" alt=""></div>
-            <div class="navBar">
-                <div class="mainLinks">
-                    <li><a href="./index.html">Board</a></li>
-                    <li><a href="./backlog.html">Backlog</a></li>
-                    <li><a href="./addTaskIndex.html">Add Task</a></li>
-                    <li><a href="./info.html">Info</a></li>
+      </nav>
+        <div class="mainPage">
+            <div class="sideBar">
+                <div class="logo"><img src="./img/logo.png" alt=""></div>
+                <div class="navBar">
+                    <div class="mainLinks">
+                        <li><a href="./index.html">Board</a></li>
+                        <li><a href="./backlog.html">Backlog</a></li>
+                        <li><a href="./addTaskIndex.html">Add Task</a></li>
+                        <li><a href="./info.html">Info</a></li>
+                    </div>
+                </div>
+                <div class="profilePic"><img id="profilePic" src="./img/profilePic3.jpg"></div>
+            </div>
+
+            <div class="mainTaskContainer">
+                <div id="task_1" class="task" ondragover="allowDrop(event); addHighlight('task_1')" ondragleave="removeHighlight()" ondragend="removeHighlight()" ondrop="moveTo(1);">
+                    <h5>To do</h5>
+                    <div class="grab" id="task1"  ></div>
+                    
+                </div>
+                <div id="task_2" class="task" ondragover="allowDrop(event); addHighlight('task_2')" ondragleave="removeHighlight()" ondragend="removeHighlight()" ondrop="moveTo(2)">
+                    <h5>In Progress</h5>
+                    <div class="grab" id="task2"  ></div>
+                </div>
+                <div id="task_3" class="task" ondragover="allowDrop(event); addHighlight('task_3')" ondragleave="removeHighlight()" ondragend="removeHighlight()" ondrop="moveTo(3)">
+                    <h5>Testing</h5>
+                    <div class="grab" id="task3"  ></div>
+                </div>
+                <div id="task_4" class="task" ondragover="allowDrop(event); addHighlight('task_4')" ondragleave="removeHighlight()" ondragend="removeHighlight()" ondrop="moveTo(4)">
+                    <h5>Done</h5>
+                    <div class="grab" id="task4"  ></div>
                 </div>
             </div>
-            <div class="profilePic"><img id="profilePic" src="./img/profilePic3.jpg"></div>
         </div>
-
-        <div class="mainTaskContainer">
-            <div id="task_1" class="task" ondragover="allowDrop(event); addHighlight('task_1')"
-                ondragleave="removeHighlight()" ondragend="removeHighlight()" ondrop="moveTo(1);">
-                <h5>To do</h5>
-                <div class="grab" id="task1"></div>
-
-            </div>
-            <div id="task_2" class="task" ondragover="allowDrop(event); addHighlight('task_2')"
-                ondragleave="removeHighlight()" ondragend="removeHighlight()" ondrop="moveTo(2)">
-                <h5>In Progress</h5>
-                <div class="grab" id="task2"></div>
-            </div>
-            <div id="task_3" class="task" ondragover="allowDrop(event); addHighlight('task_3')"
-                ondragleave="removeHighlight()" ondragend="removeHighlight()" ondrop="moveTo(3)">
-                <h5>Testing</h5>
-                <div class="grab" id="task3"></div>
-            </div>
-            <div id="task_4" class="task" ondragover="allowDrop(event); addHighlight('task_4')"
-                ondragleave="removeHighlight()" ondragend="removeHighlight()" ondrop="moveTo(4)">
-                <h5>Done</h5>
-                <div class="grab" id="task4"></div>
-            </div>
-        </div>
-    </div>
 
     </div>
     <div id="addTaskSection" class="dnone popup">
-
+        
         <form id="addTaskInputs" onsubmit="return false">
-
+            
             <div class="leftInputs">
                 <div class="inputField">
                     <label for="titleInputField" required>TITLE</label>
@@ -105,23 +105,20 @@
                 </div>
                 <div class="inputField">
                     <label for="urgency" required>URGENCY</label>
-                    <select id="urgency" required="">
-                        <option value="">- please select -</option>
-                        <option value="important">Important</option>
-                        <option value="high">High</option>
-                        <option value="medium">Medium</option>
-                        <option value="low">Low</option>
-                    </select>
+                        <select id="urgency" required="">
+                            <option value="">- please select -</option>
+                            <option value="important">Important</option>
+                            <option value="high">High</option>
+                            <option value="medium">Medium</option>
+                            <option value="low">Low</option>
+                        </select> 
                 </div>
                 <div class="inputField">
                     <label for="assignedProfile">ASSIGNED TO</label>
                     <div id="assignedProfile" class="clerk" data-tooltip="person">
-                        <img id="assignedProfilePicture0" class="avatar" src="./img/profilePic1.jpg"
-                            onclick="selectAv(0)" alt="person">
-                        <img id="assignedProfilePicture1" class="avatar" src="./img/profilePic2.jpg"
-                            onclick="selectAv(1)" alt="person">
-                        <img id="assignedProfilePicture2" class="avatar" src="./img/profilePic3.jpg"
-                            onclick="selectAv(2)" alt="person">
+                        <img id="assignedProfilePicture0" class="avatar" src="./img/profilePic1.jpg" onclick="selectAv(0)" alt="person">
+                        <img id="assignedProfilePicture1" class="avatar" src="./img/profilePic2.jpg" onclick="selectAv(1)" alt="person">
+                        <img id="assignedProfilePicture2" class="avatar" src="./img/profilePic3.jpg" onclick="selectAv(2)" alt="person">
                     </div>
                     <div class="taskButtons">
                         <button id="cancelButton" type="reset" onclick="closeWindow()">CANCEL</button>

@@ -1,3 +1,5 @@
+
+
 /* -----------------------------ADD TASK SECTION------------------------------------------- */
 /* ---------------------------------------------------------------------------------- */
 .mainTaskContainer {
@@ -5,7 +7,7 @@
     justify-content: space-between;
     align-items: center;
     margin: 30px;
-    font-family: 'PT Sans' !important;
+    font-family: 'PT Sans'!important;
 }
 
 .task1 {
@@ -47,7 +49,7 @@
 }
 
 .inputField {
-    font-family: 'PT Sans' !important;
+    font-family: 'PT Sans'!important;
     display: flex;
     flex-direction: column;
     margin-top: 1.2rem;
@@ -57,7 +59,7 @@
 }
 
 #titleInputField {
-    font-family: 'PT Sans' !important;
+    font-family: 'PT Sans'!important;
     font-size: medium;
     border-radius: 4px;
     padding: 0.5rem;
@@ -69,10 +71,8 @@
     border: 1px solid #c0c0c073;
 }
 
-.input-form input,
-textarea,
-select {
-    font-family: 'PT Sans' !important;
+.input-form input, textarea, select {
+    font-family: 'PT Sans'!important;
     outline: none;
     border-width: 1.5px;
     border: 1px solid #c0c0c073;
@@ -84,13 +84,13 @@ select {
 }
 
 .input-form label[required]::after {
-    font-family: 'PT Sans' !important;
+    font-family: 'PT Sans'!important;
     content: ' *';
     color: red;
 }
 
 .headlineTask {
-    font-family: 'PT Sans' !important;
+    font-family: 'PT Sans'!important;
     font-size: 34px;
     font-weight: bold;
     padding-bottom: 0px;
@@ -98,7 +98,7 @@ select {
 }
 
 .underHeadlineTask {
-    font-family: 'PT Sans' !important;
+    font-family: 'PT Sans'!important;
     font-size: 14px;
     color: #ff9d00;
     padding-top: 0px;
@@ -112,7 +112,7 @@ select {
 }
 
 #cancelButton {
-    font-family: 'PT Sans' !important;
+    font-family: 'PT Sans'!important;
     padding-right: 80px;
     padding-left: 120px;
     font-size: 16px;
@@ -126,7 +126,7 @@ select {
 }
 
 #createTaskButton {
-    font-family: 'PT Sans' !important;
+    font-family: 'PT Sans'!important;
     padding: 0.5rem 2rem;
     font-size: 16px;
     border: 1px solid transparent;
@@ -207,7 +207,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
     background-size: 1.2rem;
     cursor: pointer;
 }
-
 .avatar {
     border: 4px solid transparent;
     opacity: 0.6;
@@ -231,10 +230,9 @@ input[type=date]::-webkit-calendar-picker-indicator {
 @media only screen and (max-width: 1062px) {
 
     .navbar {
-        display: block !important;
-        display: flex !important;
+        display: block!important;
+        display: flex!important;
     }
-
     .sideBar {
         display: none;
     }
@@ -256,7 +254,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 @media screen and (max-width: 530px) {
     .mainTaskContainer {
-        justify-content: center !important;
+        justify-content: center!important;
     }
 }
 
